@@ -10,16 +10,11 @@ html {
 }
 
 .hive {
-  z-index: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 70%;
-  mix-blend-mode: color-dodge;
+  background-image: url("../resources/img/purpleHiveLowOpacity.png");
 }
 
 footer {
   background-color: #171717;
-  margin-bottom: 0px;
 }
 
 .navbar {
@@ -151,7 +146,7 @@ form .btn-lg, form .btn-group-lg > .btn {
 
 .main footer hr {
   background-color: #4111CA;
-  margin: 5rem 0;
+  margin: 3rem 0;
   height: 3px;
 }
 

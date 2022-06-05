@@ -49,20 +49,14 @@
 
 html{
   @include general-bg();
-
 }
 
 .hive {
-  z-index: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 70%;
-  mix-blend-mode:color-dodge;
+  background-image: url('../resources/img/purpleHiveLowOpacity.png');
 }
 
 footer{
   @include general-bg();
-  margin-bottom: 0px;
 }
 
 .navbar{
@@ -172,7 +166,7 @@ form .btn-lg{
 
 .main footer hr{
   @include purpleLine();
-  margin: 5rem 0;
+  margin: 3rem 0;
   height: 3px;
 }
 
