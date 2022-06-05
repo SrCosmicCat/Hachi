@@ -1,18 +1,3 @@
-.navbar {
-  background-color: #171717;
-  border-top-left-radius: 40px;
-  border-top-right-radius: 10px;
-  padding: 5px;
-  color: #f5f5f5;
-}
-
-#logo {
-  width: 50px;
-  height: 50px;
-  margin-left: 40px;
-  margin-top: -5px;
-}
-
 @font-face {
   font-family: 'MADE_Tommy_Soft';
   src: url("../resources/fonts/MADE_Tommy_Soft_Regular.otf") format("OpenType");
@@ -20,9 +5,21 @@
   font-weight: normal;
 }
 
+.navbar {
+  background-color: #171717;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 10px;
+  color: #f5f5f5;
+}
+
+#logo {
+  width: 50px;
+  height: 50px;
+}
+
 .hachiLogoMenu {
   font-family: 'MADE_Tommy_Soft';
-  font-weight: 300;
+  font-weight: bold;
   font-size: 30px;
   color: white;
 }
@@ -56,6 +53,26 @@
 
 .navbar .btn-primary-round-md :hover {
   color: #4111CA;
+}
+
+.main {
+  background-color: #171717;
+  padding: 5%;
+}
+
+.bigTitle {
+  font-family: 'MADE_Tommy_Soft';
+  font-size: 50px;
+  font-weight: bold;
+  color: #f5f5f5;
+}
+
+form {
+  background-color: #f5f5f5;
+  font-family: 'MADE_Tommy_Soft';
+  color: #171717;
+  border-radius: 20px;
+  padding: 50px 70px 70px 70px;
 }
 
 /*!
