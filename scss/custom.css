@@ -6,11 +6,17 @@
   color: #f5f5f5;
 }
 
-#logo {
-  width: 50px;
-  height: 50px;
-  margin-left: 40px;
-  margin-top: -5px;
+#logo_image {
+  width: 40px;
+  height: 40px;
+  margin-top: -12px;
+}
+
+#logo_div{
+margin-top: auto;
+margin-bottom: auto;
+margin-left: 50px;
+
 }
 
 @font-face {
@@ -43,6 +49,7 @@
   font-family: 'MADE_Tommy_Soft';
   font-size: 23px;
   color: #f5f5f5;
+  height: 50%;
 }
 
 .nav .btn-primary-round-md {
@@ -51,6 +58,7 @@
   font-family: 'MADE_Tommy_Soft';
   font-size: 23px;
   color: #f5f5f5;
+  height: 50%;
 }
 
 .nav .btn-primary-round-md :hover {
