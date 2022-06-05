@@ -1,4 +1,4 @@
-.nav{
+.navbar{
   background-color: #171717;
   border-top-left-radius: 40px;
   border-top-right-radius: 10px;
@@ -25,6 +25,7 @@
   font-weight: 300;
   font-size: 30px;
   color: rgb(255, 255, 255);
+  
 }
 
 .hachiTextMenu{
@@ -33,31 +34,28 @@
 
 }
 
-.buttonMenu :hover{
+.nav-item :hover{
   font-family: 'MADE_Tommy_Soft';
   color: #4111CA;
 }
 
-.nav .btn-default-round-md{
+.navbar .btn-default-round-md{
   border-radius: 20px;
+  margin: 2px;
   background-color: #4111CA;
   font-family: 'MADE_Tommy_Soft';
-  font-size: 23px;
+  font-size: 20px;
   color: #f5f5f5
 }
-.nav .btn-primary-round-md{
+.navbar .btn-primary-round-md{
   border-radius: 20px;
   background-color: none;
   font-family: 'MADE_Tommy_Soft';
-  font-size: 23px;
+  font-size: 20px;
   color: #f5f5f5
 }
-.nav .btn-primary-round-md :hover{
+.navbar .btn-primary-round-md :hover{
   color: #4111CA;
-}
-
-.no{
-  list-style: none;
 }
 
 
