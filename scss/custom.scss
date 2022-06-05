@@ -1,13 +1,15 @@
-nav{
+.navbar{
   background-color: #171717;
   border-top-left-radius: 40px;
   border-top-right-radius: 10px;
+  color: #f5f5f5;
 }
 
 #logo{
   width: 50px;
   height: 50px;
   margin-left: 40px;
+  margin-top: -5px;
 }
 
 @font-face{
@@ -17,9 +19,38 @@ nav{
   font-weight: normal;
 }
 
-nav .hachiLogoText{
+.hachiLogoMenu{
   font-family: 'MADE_Tommy_Soft';
+  font-weight: 300;
+  font-size: 30px;
   color: rgb(255, 255, 255);
 }
+
+.hachiTextMenu{
+  font-family: 'MADE_Tommy_Soft';
+  color: rgb(255, 255, 255);
+
+}
+
+.buttonMenu :hover{
+  font-family: 'MADE_Tommy_Soft';
+  color: #4111CA;
+}
+
+.navbar .btn-default-round-md{
+  border-radius: 20px;
+  background-color: #4111CA;
+  font-family: 'MADE_Tommy_Soft';
+  font-size: 23px;
+  color: #f5f5f5
+}
+.navbar .btn-primary-round-md{
+  border-radius: 20px;
+  background-color: none;
+  font-family: 'MADE_Tommy_Soft';
+  font-size: 23px;
+  color: #f5f5f5
+}
+
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
