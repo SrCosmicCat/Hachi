@@ -49,10 +49,15 @@
 
 html{
   @include general-bg();
+
 }
 
-body{
-  background-color: #171717;
+.hive {
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 70%;
+  mix-blend-mode:color-dodge;
 }
 
 footer{
@@ -72,16 +77,29 @@ footer{
   margin: 10px;
 }
 
+#hachiLogoFooter{
+  height:100px;
+  width: auto;
+  margin: 20px;
+}
+
 .hachiLogoMenu{
   font-family: 'MADE_Tommy_Soft';
   font-weight: bold;
   font-size: 30px;
   color: rgb(255, 255, 255);
-  
 }
+
 
 .hachiTextMenu{
   font-family: 'MADE_Tommy_Soft';
+  color: rgb(255, 255, 255);
+}
+
+.hachiTextFooter{
+  font-family: 'MADE_Tommy_Soft';
+  font-size: 25px;
+  margin-top: 53px;
   color: rgb(255, 255, 255);
 }
 
