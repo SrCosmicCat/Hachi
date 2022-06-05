@@ -1,7 +1,8 @@
-.navbar {
+.nav {
   background-color: #171717;
   border-top-left-radius: 40px;
   border-top-right-radius: 10px;
+  padding: 5px;
   color: #f5f5f5;
 }
 
@@ -36,7 +37,7 @@
   color: #4111CA;
 }
 
-.navbar .btn-default-round-md {
+.nav .btn-default-round-md {
   border-radius: 20px;
   background-color: #4111CA;
   font-family: 'MADE_Tommy_Soft';
@@ -44,12 +45,20 @@
   color: #f5f5f5;
 }
 
-.navbar .btn-primary-round-md {
+.nav .btn-primary-round-md {
   border-radius: 20px;
   background-color: none;
   font-family: 'MADE_Tommy_Soft';
   font-size: 23px;
   color: #f5f5f5;
+}
+
+.nav .btn-primary-round-md :hover {
+  color: #4111CA;
+}
+
+.no {
+  list-style: none;
 }
 
 /*!
