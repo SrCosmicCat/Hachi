@@ -1,0 +1,178 @@
+
+@mixin general-bg {
+  background-color: #171717;
+}
+
+@font-face{
+  font-family: 'MADE_Tommy_Soft';
+  src: url('../resources/fonts/MADE_Tommy_Soft_Regular.otf') format('OpenType');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin makeTitle{
+  font-family: 'MADE_Tommy_Soft';
+  font-size: 50px;
+  font-weight: bold;
+  color: #f5f5f5;
+}
+
+@mixin purpleButton{
+  border-radius: 20px;
+  margin: 2px;
+  background-color: #4111CA;
+  font-family: 'MADE_Tommy_Soft';
+  font-size: 20px;
+  color: #f5f5f5
+}
+
+@mixin whiteForm{
+  background-color: #f5f5f5;
+  font-family: 'MADE_Tommy_Soft';
+  color: #1d1d1d;
+  border-radius: 20px;
+  padding: 50px 70px 70px 70px;  
+  margin: 10px;
+}
+
+@mixin inputForm {
+  border-radius: 10px;
+  background-color: #D2C6F4;
+  margin-bottom: 25px;
+  margin-top: 5px;
+  font-weight: bold;
+  }
+
+@mixin purpleLine{  
+  background-color: #4111CA;
+}
+
+html{
+  @include general-bg();
+}
+
+.hive {
+  background-image: url('../resources/img/purpleHiveLowOpacity.png');
+}
+
+footer{
+  @include general-bg();
+}
+
+.navbar{
+  margin-top: 10px;
+  background-color: #171717;
+  color: #f5f5f5;
+}
+
+#logo{
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+}
+
+#hachiLogoFooter{
+  height:100px;
+  width: auto;
+  margin: 20px;
+}
+
+.hachiLogoMenu{
+  font-family: 'MADE_Tommy_Soft';
+  font-weight: bold;
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+}
+
+
+.hachiTextMenu{
+  font-family: 'MADE_Tommy_Soft';
+  color: rgb(255, 255, 255);
+}
+
+.hachiTextFooter{
+  font-family: 'MADE_Tommy_Soft';
+  font-size: 25px;
+  margin-top: 53px;
+  color: rgb(255, 255, 255);
+}
+
+.regularText{
+  font-family: 'MADE_Tommy_Soft';
+  font-size: 25px;
+  font-stretch: expanded;
+  font-weight: lighter;
+  color: #f5f5f5;
+  line-height: 50px;
+}
+
+.nav-item :hover{
+  font-family: 'MADE_Tommy_Soft';
+  color: #4111CA;
+}
+
+.navbar .btn-default-round-md{
+  @include purpleButton();
+}
+
+.navbar .btn-primary-round-md{
+  border-radius: 20px;
+  background-color: none;
+  font-family: 'MADE_Tommy_Soft';
+  font-size: 20px;
+  color: #f5f5f5
+}
+.navbar .btn-primary-round-md:hover{
+  color: #4111CA;
+}
+
+.main{
+ @include general-bg();
+ padding: .1% 5%;
+}
+
+.bigTitle{
+  @include makeTitle();
+}
+
+
+form {
+ @include whiteForm();
+}
+
+form .form-control{
+ @include inputForm();
+}
+
+input[type="checkbox"]{
+  appearance: none;
+  -webkit-appearance: none;
+  height: 24px;
+  width: 24px;
+  position: relative;
+  cursor: pointer;
+  background-image: url('../resources/icons/purplebox.png');
+  }
+  
+  input[type="checkbox"]:checked{
+    padding: 3px;
+   content: url('../resources/icons/palomita.png');
+    }
+    
+form .btn-lg{
+  @include purpleButton();
+  margin: 20px;
+}
+
+.main footer hr{
+  @include purpleLine();
+  margin: 3rem 0;
+  height: 3px;
+}
+
+body .main hr{
+  @include purpleLine();
+  height: 3px;
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
