@@ -174,5 +174,26 @@ body .main hr{
   @include purpleLine();
   height: 3px;
 }
+.input-container{
+  position: relative;
+}
+
+.input-icon{
+  height: 1em;
+  width: 1em;
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+
+ .si-visible{
+  display: block;
+}
+ .no-visible{
+  display: none;
+}
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";

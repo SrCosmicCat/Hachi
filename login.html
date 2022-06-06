@@ -34,8 +34,8 @@
                         </li>
                 </div>
                 <div class="navbar-nav justify-content-end"></div>
-                    <button type="button" class="btn btn-primary-round-md"> Log in</button>
-                    <button type="button" class="btn btn-default-round-md"> Sign up</button>  
+                    <button type="button" class="btn btn-primary-round-md" id="btn-log-in"> Log in</button>
+                    <button type="button" class="btn btn-default-round-md" id="btn-sign-up"> Sign up</button>  
                 </div>
         </ul>
         </nav>  
@@ -54,57 +54,88 @@
                 </div>
             <!--Log in form-->
                 <div class="col-md mt-3">
-                    <form>
+                    
+                    <form class="si-visible" id="form-sign-up">
                         <div class="row">
                             <div class="col-sm-6">
-                                <label for="inputFirtsName">First Name</label>
-                                <input type="text" class="form-control" id="first-name" placeholder="Fisrt name">
+                                <label for="inputFullName">Full Name</label>
+                                <div class="input-container">
+                                    <input type="text" class="form-control" id="inputFullName" placeholder="Full name">
+                                    <img src="resources/icons/errorIcon.png" class="input-icon no-visible" id="errorName" alt="ERROR">
+                                </div>
+                                
                             </div>
-                                <div class="col-sm-6">
-                                <label for="inputLastName">Last Name</label>
-                                <input type="text" class="form-control" id="last-name" placeholder="Last name">
+                            <div class="col-sm-6">
+                                <label for="inputUsername">Username</label>
+                                <div class="input-container">
+                                    <input type="text" class="form-control" id="inputUsername" placeholder="Username">
+                                    <img src="resources/icons/errorIcon.png" class="input-icon no-visible" id="errorUsername" alt="ERROR">
                                 </div>
                             </div>
+                        </div>
                         <div class="form-group">
                             <div class="col-md-12">
                             <label for="inputEmail">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Email">
+                            <div class="input-container">
+                                <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                                <img src="resources/icons/errorIcon.png" class="input-icon no-visible" id="errorEmail" alt="ERROR">
+                            </div>
                         </div>
                         <div class="form-group">
-                            <label for="pasword">Password</label>
-                            <input type="password" class="form-control" id="password" placeholder="Password">
+                            <label for="inputPasword">Password</label>
+                            <div class="input-container">
+                                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                                <img src="resources/icons/errorIcon.png" class="input-icon no-visible" id="errorPassword" alt="ERROR">
+                            </div>
                         </div>
                         <div class="row">
                             <div class="form-group">
-                          <input type="checkbox" name="terms" id="terms" class="custom-control-input">
-                          <label for="terms and conditions"> I have read and accept the terms and conditions </label>
-            
+                                <input type="checkbox" name="terms" id="terms" class="custom-control-input">
+                                <label for="terms"> I have read and accept the terms and conditions </label>
                            </div>
                         </div>
-                        <div class="d-flex justify-content-center">
-                        <button type="submit" class="btn btn-lg">Create account</button>
-                    </div>
-                </div>
+                            <div class="d-flex justify-content-center">
+                                <button type="submit" class="btn btn-lg">Create account</button>
+                            </div>
+                        </div>
                     </form>
+                    
+
+                    <form class="no-visible" id="form-log-in">
+                        <div class="form-group">
+                            <div class="col-md-12">
+                            <label for="inputEmailUsername">Email or username</label>
+                            <input type="text" class="form-control" id="email" placeholder="Email or username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pasword">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Password" required>
+                        </div>
+                        </div>
+                            <div class="d-flex justify-content-center">
+                                <button type="submit" class="btn btn-lg">Log in</button>
+                            </div>
+                        </div>
+                    </form>
+
                 </div>
 
                 </div>
+                </div>
+                <!-- Footer -->
+                <footer class="footer">       
+                    <hr>
+                    <div class="row justify-content-center">
+                        <div class="col-md-4">
+                            <img id="hachiLogoFooter" src="resources/img/Hachi_logo_letters_horizontal.png" alt="Hachi's logo brand">
+                        </div>
+                        <div class="col-md-6">
+                            <h1 class="hachiTextFooter"> Hachi Ver 1.0 Copyright &copy; 2022. All rights reserved. </h1>
+                        </div>
+
+                    </div>
+                </footer>
             </div>
-<!-- Footer -->
-        <footer class="footer">       
-            <hr>
-<div class="row justify-content-center">
-    <div class="col-md-4">
-        <img id="hachiLogoFooter" src="resources/img/Hachi_logo_letters_horizontal.png" alt="Hachi's logo brand">
-
-</div>
-    <div class="col-md-6">
-        <h1 class="hachiTextFooter"> Copyright &copy; 2022. All rights reserved </h1>
-</div>
-
-
-        </footer>
-    </div>
-</div>
+        <script src="js/animaciones.js"></script>
     </body>
 </html>
