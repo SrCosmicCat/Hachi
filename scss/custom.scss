@@ -1,3 +1,14 @@
+$hachiPurple: #4111CA;
+$hachiGray: #171717;
+$hachiDarkerGray: #111111;
+$hachiYellow: #e7b614;
+
+
+$theme-colors:(
+  "hachiPurple": #4111CA,
+  "hachiYellow": #e7b614
+);
+
 
 @mixin general-bg {
   background-color: #171717;
@@ -47,6 +58,13 @@
   background-color: #4111CA;
 }
 
+@mixin boxPurpleBorder{
+ padding: 10px;
+ border-style: solid;
+ border-color: #4111CA;
+ 
+}
+
 html{
   @include general-bg();
 }
@@ -61,7 +79,7 @@ footer{
 
 .navbar{
   margin-top: 10px;
-  background-color: #171717;
+  background-color: $hachiGray;
   color: #f5f5f5;
 }
 
@@ -104,6 +122,12 @@ footer{
   font-weight: lighter;
   color: #f5f5f5;
   line-height: 50px;
+}
+
+.main h3 {
+  font-family: 'MADE_Tommy_Soft';
+  font-size: 15px;
+  color: #f5f5f5;
 }
 
 .nav-item :hover{
@@ -187,7 +211,30 @@ body .main hr{
   transform: translateY(-50%);
 }
 
+.darker-box{
+  padding: 2rem;
+  background-color: $hachiDarkerGray;
+  border-radius: 20px;
+}
 
+.project-box{
+  padding: 1rem;
+  margin: 1rem;
+  background-color: $hachiGray;
+  border-radius: 20px;
+  @include makeTitle();
+  font-size: 25px;
+}
+
+.project-box-selected{
+  @include boxPurpleBorder();
+  padding: 1rem;
+  margin: 1rem;
+  background-color: $hachiGray;
+  border-radius: 20px;
+  @include makeTitle();
+  font-size: 25px;
+}
 
  .si-visible{
   display: block;
@@ -196,4 +243,17 @@ body .main hr{
   display: none;
 }
 
+.taskbox{
+  @include boxPurpleBorder();
+  border-radius: 20px;
+  font-size: 10px;
+  margin-top: 10px;
+}
+
+.task-type{
+  margin-top: 1rem;
+}
+
+
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/bootstrap/scss/bootstrap";
