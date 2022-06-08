@@ -1,18 +1,29 @@
+//Forms
 let formSignUp = document.getElementById("form-sign-up");
 let formLogIn = document.getElementById("form-log-in");
 
+//Buttons
 let btnSignUp = document.getElementById("btn-sign-up");
 let btnLogIn = document.getElementById("btn-log-in");
 
+//Sign Up
 let inputFullName = document.getElementById("inputFullName");
 let inputUsername= document.getElementById("inputUsername");
 let inputEmail = document.getElementById("inputEmail");
 let inputPassword = document.getElementById("inputPassword");
 
+//Log In
+let inputEmailUsername = document.getElementById("inputEmailUsername");
+let inputPasswordLogin = document.getElementById("inputPasswordLogin");
+
+//Error
 let errorName = document.getElementById("errorName");
 let errorUsername = document.getElementById("errorUsername");
 let errorEmail = document.getElementById("errorEmail");
 let errorPassword = document.getElementById("errorPassword");
+let errorUsernameEmail = document.getElementById("errorUsernameEmail");
+let errorPasswordLogin = document.getElementById("errorPasswordLogin");
+
 
 //Action buttons from header
 btnLogIn.addEventListener("click", () => {
@@ -45,7 +56,7 @@ btnSignUp.addEventListener("click", () => {
     }
 });
 
-//Form icons
+//Form icons from Sign Up
 formSignUp.addEventListener("submit", (e) => {
     e.preventDefault();
     let name = inputFullName.value;
@@ -75,6 +86,25 @@ formSignUp.addEventListener("submit", (e) => {
     }
 });
 
+//Form icons from Log in
+formLogIn.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let usernameEmail = inputEmailUsername.value;
+    let password = inputPasswordLogin.value; 
+
+    if (usernameEmail == ""){
+        errorUsernameEmail.classList.add("si-visible");
+        errorUsernameEmail.classList.remove("no-visible");
+        inputEmailUsername.style.boxShadow = "inset 0 0 0 2px #4111CA";
+    }
+    if (password == ""){
+        errorPasswordLogin.classList.add("si-visible");
+        errorPasswordLogin.classList.remove("no-visible");
+        inputPasswordLogin.style.boxShadow = "inset 0 0 0 2px #4111CA";
+    }
+});
+
+
 inputFullName.addEventListener("click", () => {
     errorName.classList.remove("si-visible");
     errorName.classList.add("no-visible");
@@ -95,3 +125,14 @@ inputPassword.addEventListener("click", () => {
     errorPassword.classList.add("no-visible");
     inputPassword.style.boxShadow = "none";
 });
+inputEmailUsername.addEventListener("click", () => {
+    errorUsernameEmail.classList.remove("si-visible");
+    errorUsernameEmail.classList.add("no-visible");
+    inputEmailUsername.style.boxShadow = "none";
+});
+inputPasswordLogin.addEventListener("click", () => {
+    errorPasswordLogin.classList.remove("si-visible");
+    errorPasswordLogin.classList.add("no-visible");
+    inputPasswordLogin.style.boxShadow = "none";
+});
+
