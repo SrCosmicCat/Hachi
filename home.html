@@ -45,77 +45,163 @@
                 <div class="hive">
                     <!-- Dashboard-->
                     <div class="row">
-                        <div class="col-md-10">
+                        <div class="col-xl-10 col-lg-12 col-md-12 col-sm-12">
                             <div class="darker-box">
                                 <div class="row">
-                                    <div class="project-box col">Create new project</div>
-                                    <div class="project-box-selected col">Project 1</div>
-                                    <div class="project-box col">Project 2</div>
-                                    <div class="project-box col">See all</div>
-                                </div>
-                                    <div class="project-box col">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <span class="regularText">Project name</span>
-                                                <h3>Owner Name: Chostito</h3>
-                                                <br>
-                                                <span class="regularText">Overview</span>
-                                                <h3>Completed Tasks</h3>
-                                                <div class="progress" style="height: 25px; border:solid; border-width: 4px; border-color: #4111CA">
-                                                    <div class="progress-bar bg-hachiYellow"  style="width: 58%; color: #171717;"></div>
+                                    <button type="button" class="project-box col" id="create-project" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        Create new project
+                                    </button>
+                                    <!-- Modal create project -->
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Create new project</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
-                                                <h3 class="d-flex justify-content-center mt-2">58%</h3>
+                                                <form id="form-create-project">
+                                                    <div class="modal-body">
+                                                        <div class="form-group">
+                                                            <label for="inputEmail">Project Name</label>
+                                                            <div class="input-container">
+                                                                <input type="text" class="form-control" id="inputProjectName" placeholder="Project Name">
+                                                                <img src="resources/icons/errorIcon.png" class="input-icon no-visible" id="errorProjectName" alt="ERROR">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer d-flex">
+                                                        <button type="button" class="btn btn-lg" data-bs-dismiss="modal">Close</button>
+                                                        <button type="submit" class="btn btn-lg">Create new</button>
+                                                    </div>
+                                                </form>
                                             </div>
-                                            <div class="col">
-                                                <div class="taskbox">
-                                                    <span class="regularText">Tasks</span>
-                                                    <div class="row">
-                                                        <div class="col">
-                                                            <h3>To do</h3>
-                                                            <div class="taskbox">
-                                                                <span>Task 1</span>
-                                                            </div>
-                                                            <div class="taskbox">
-                                                                <span>Task 2</span>
-                                                            </div>
-                                                            <div class="taskbox">
-                                                                <span>Task 3</span>
-                                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="project-box-selected col" id="btn-project-1">Project 1</div>
+                                    <div class="project-box col" id="btn-project-2">Project 2</div>
+                                    <div class="project-box col" id="see-all">See all</div>
+                                </div>
+                                <div class="project-box">
+                                    <!--PROJECTS-->
+                                    <div class="row si-visible-project" id="project-1">
+                                        <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12">
+                                            <span class="regularText">Project name</span>
+                                            <h3>Owner Name: Chostito</h3>
+                                            <br>
+                                            <span class="regularText">Overview</span>
+                                            <h3>Completed Tasks</h3>
+                                            <div class="progress" style="height: 25px; border:solid; border-width: 4px; border-color: #4111CA">
+                                                <div class="progress-bar bg-hachiYellow"  style="width: 58%;"></div>
+                                            </div>
+                                            <h3 class="d-flex justify-content-center mt-2">58%</h3>
+                                        </div>
+
+                                        <div class="col-xl-8 col-lg-12 col-md-12 col-sm-12">
+                                            <div class="taskbox">
+                                                <span class="regularText">Tasks</span>
+                                                <div class="row">
+                                                    <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12">
+                                                        <h3>To do</h3>
+                                                        <div class="taskbox">
+                                                            <span>Task 1</span>
                                                         </div>
-                                                        <div class="col">
-                                                            <h3>Urgent</h3>
-                                                            <div class="taskbox">
-                                                                <span>Task 1</span>
-                                                            </div>
-                                                            <div class="taskbox">
-                                                                <span>Task 2</span>
-                                                            </div>
+                                                        <div class="taskbox">
+                                                            <span>Task 2</span>
                                                         </div>
-                                                        <div class="col">
-                                                            <h3>Done</h3>
-                                                            <div class="taskbox">
-                                                                <span>Task 1</span>
-                                                            </div>
-                                                            <div class="taskbox">
-                                                                <span>Task 2</span>
-                                                            </div>
-                                                            <div class="taskbox">
-                                                                <span>Task 3</span>
-                                                            </div>
-                                                            <div class="taskbox">
-                                                                <span>Task 4</span>
-                                                            </div>
+                                                        <div class="taskbox">
+                                                            <span>Task 3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12">
+                                                        <h3>Urgent</h3>
+                                                        <div class="taskbox">
+                                                            <span>Task 1</span>
+                                                        </div>
+                                                        <div class="taskbox">
+                                                            <span>Task 2</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12">
+                                                        <h3>Done</h3>
+                                                        <div class="taskbox">
+                                                            <span>Task 1</span>
+                                                        </div>
+                                                        <div class="taskbox">
+                                                            <span>Task 2</span>
+                                                        </div>
+                                                        <div class="taskbox">
+                                                            <span>Task 3</span>
+                                                        </div>
+                                                        <div class="taskbox">
+                                                            <span>Task 4</span>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <!--Project 2-->
+                                    <div class="row no-visible" id="project-2">
+                                        <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12">
+                                            <span class="regularText">Project name</span>
+                                            <h3>Owner Name: Rosel</h3>
+                                            <br>
+                                            <span class="regularText">Overview</span>
+                                            <h3>Completed Tasks</h3>
+                                            <div class="progress" style="height: 25px; border:solid; border-width: 4px; border-color: #4111CA">
+                                                <div class="progress-bar bg-hachiYellow" style="width: 80%;"></div>
+                                            </div>
+                                            <h3 class="d-flex justify-content-center mt-2">80%</h3>
+                                        </div>
+
+                                        <div class="col-xl-8 col-lg-12 col-md-12 col-sm-12">
+                                            <div class="taskbox">
+                                                <span class="regularText">Tasks</span>
+                                                <div class="row">
+                                                    <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12">
+                                                        <h3>To do</h3>
+                                                        <div class="taskbox">
+                                                            <span>Task 1</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12">
+                                                        <h3>Urgent</h3>
+                                                        <div class="taskbox">
+                                                            <span>Task 1</span>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12">
+                                                        <h3>Done</h3>
+                                                        <div class="taskbox">
+                                                            <span>Task 1</span>
+                                                        </div>
+                                                        <div class="taskbox">
+                                                            <span>Task 2</span>
+                                                        </div>
+                                                        <div class="taskbox">
+                                                            <span>Task 3</span>
+                                                        </div>
+                                                        <div class="taskbox">
+                                                            <span>Task 4</span>
+                                                        </div>
+                                                        <div class="taskbox">
+                                                            <span>Task 5</span>
+                                                        </div>
+                                                        <div class="taskbox">
+                                                            <span>Task 6</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    
                         <!--Tasks-->
-                        <div class="col-md-2">
+                        <div class="col-xl-2 col-lg-12 col-md-12 col-sm-12">
                             <div class="darker-box">
                                 <div class="task-type">
                                     <h3> Urgent
@@ -169,6 +255,7 @@
                 </footer>
             </div>
         </div>
-        <script src="js/animaciones.js"></script>
+        <script src="js/projectManager.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
     </body>
 </html>

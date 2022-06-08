@@ -65,6 +65,7 @@ $theme-colors:(
  
 }
 
+
 html{
   @include general-bg();
 }
@@ -176,14 +177,14 @@ input[type="checkbox"]{
   position: relative;
   cursor: pointer;
   background-image: url('../resources/icons/purplebox.png');
-  }
+}
   
-  input[type="checkbox"]:checked{
-    padding: 3px;
-   content: url('../resources/icons/palomita.png');
-    }
+input[type="checkbox"]:checked{
+  padding: 3px;
+  content: url('../resources/icons/palomita.png');
+}
     
-form .btn-lg{
+form .btn-lg, body .modal .modal-content form .btn-lg{
   @include purpleButton();
   margin: 20px;
 }
@@ -222,6 +223,7 @@ body .main hr{
   margin: 1rem;
   background-color: $hachiGray;
   border-radius: 20px;
+  border: none;
   @include makeTitle();
   font-size: 25px;
 }
@@ -236,11 +238,14 @@ body .main hr{
   font-size: 25px;
 }
 
- .si-visible{
-  display: block;
+.si-visible{
+  display: block !important;
 }
- .no-visible{
-  display: none;
+.si-visible-project{
+  display: flex !important;
+}
+.no-visible{
+  display: none !important;
 }
 
 .taskbox{
@@ -252,6 +257,16 @@ body .main hr{
 
 .task-type{
   margin-top: 1rem;
+}
+
+body .modal .modal-content .modal-title{
+  font-family: 'MADE_Tommy_Soft';
+  font-weight: bold;
+}
+body .modal-content{
+  background-color: #f5f5f5;
+  font-family: 'MADE_Tommy_Soft';
+  border-radius: 20px;
 }
 
 
