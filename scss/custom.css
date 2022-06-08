@@ -140,6 +140,10 @@ input[type="checkbox"]:checked {
   content: url("../resources/icons/palomita.png");
 }
 
+textarea {
+  width: 100%;
+}
+
 form .btn-lg, form .btn-group-lg > .btn, body .modal .modal-content form .btn-lg, body .modal .modal-content form .btn-group-lg > .btn {
   border-radius: 20px;
   margin: 2px;
@@ -194,10 +198,16 @@ body .main hr {
   font-size: 25px;
 }
 
+.project-box span.project-owner, .project-box-selected span.project-owner {
+  font-size: 12px;
+}
+
 .project-box-selected {
   padding: 10px;
   border-style: solid;
-  border-color: #4111CA;
+  border: none;
+  -webkit-box-shadow: inset 0 0 0 3px #4111CA;
+          box-shadow: inset 0 0 0 3px #4111CA;
   padding: 1rem;
   margin: 1rem;
   background-color: #171717;
@@ -226,7 +236,9 @@ body .main hr {
 .taskbox {
   padding: 10px;
   border-style: solid;
-  border-color: #4111CA;
+  border: none;
+  -webkit-box-shadow: inset 0 0 0 3px #4111CA;
+          box-shadow: inset 0 0 0 3px #4111CA;
   border-radius: 20px;
   font-size: 10px;
   margin-top: 10px;
@@ -236,9 +248,10 @@ body .main hr {
   margin-top: 1rem;
 }
 
-body .modal .modal-content .modal-title {
+body .modal .modal-content .modal-header .modal-title {
   font-family: 'MADE_Tommy_Soft';
   font-weight: bold;
+  color: #111111;
 }
 
 body .modal-content {

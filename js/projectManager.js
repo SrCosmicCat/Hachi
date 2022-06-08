@@ -23,7 +23,6 @@ formCreateProject.addEventListener("submit", (e) => {
 
         inputProjectName.style.boxShadow = "inset 0 0 0 2px #4111CA";
         banner = false;
-
     }
     if (banner){
         formCreateProject.submit();
