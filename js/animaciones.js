@@ -11,6 +11,7 @@ let inputFullName = document.getElementById("inputFullName");
 let inputUsername= document.getElementById("inputUsername");
 let inputEmail = document.getElementById("inputEmail");
 let inputPassword = document.getElementById("inputPassword");
+let inputTerms = document.getElementById("inputTerms");
 
 //Log In
 let inputEmailUsername = document.getElementById("inputEmailUsername");
@@ -63,26 +64,52 @@ formSignUp.addEventListener("submit", (e) => {
     let username = inputUsername.value;
     let email = inputEmail.value;
     let password = inputPassword.value;
+    let checkterms = inputTerms.checked;
+    let banner = true;
 
     if (name == ""){
         errorName.classList.add("si-visible");
         errorName.classList.remove("no-visible");
         inputFullName.style.boxShadow = "inset 0 0 0 2px #4111CA";
+        banner = false;
     }
     if (username == ""){
         errorUsername.classList.add("si-visible");
         errorUsername.classList.remove("no-visible");
         inputUsername.style.boxShadow = "inset 0 0 0 2px #4111CA";
+        banner = false;
     }
     if (email == ""){
         errorEmail.classList.add("si-visible");
         errorEmail.classList.remove("no-visible");
         inputEmail.style.boxShadow = "inset 0 0 0 2px #4111CA";
+        banner = false;
     }
     if (password == ""){
         errorPassword.classList.add("si-visible");
         errorPassword.classList.remove("no-visible");
         inputPassword.style.boxShadow = "inset 0 0 0 2px #4111CA";
+        banner = false;
+    }
+    if (!checkterms) {
+        inputTerms.style.boxShadow = "inset 0 0 0 2px #4111CA";
+        banner = false;
+    }
+    if (banner){
+        //Submit form
+        alert("Cuenta registrada");
+
+        //Go to Log in
+        formLogIn.classList.add("si-visible");
+        formLogIn.classList.remove("no-visible");
+        formSignUp.classList.add("no-visible");
+        formSignUp.classList.remove("si-visible");
+
+        btnLogIn.classList.add("btn-default-round-md");
+        btnLogIn.classList.remove("btn-primary-round-md");
+
+        btnSignUp.classList.remove("btn-default-round-md");
+        btnSignUp.classList.add("btn-primary-round-md");
     }
 });
 
@@ -90,17 +117,24 @@ formSignUp.addEventListener("submit", (e) => {
 formLogIn.addEventListener("submit", (e) => {
     e.preventDefault();
     let usernameEmail = inputEmailUsername.value;
-    let password = inputPasswordLogin.value; 
+    let password = inputPasswordLogin.value;
+    let banner = true;
 
     if (usernameEmail == ""){
         errorUsernameEmail.classList.add("si-visible");
         errorUsernameEmail.classList.remove("no-visible");
         inputEmailUsername.style.boxShadow = "inset 0 0 0 2px #4111CA";
+        banner = false;
     }
     if (password == ""){
         errorPasswordLogin.classList.add("si-visible");
         errorPasswordLogin.classList.remove("no-visible");
         inputPasswordLogin.style.boxShadow = "inset 0 0 0 2px #4111CA";
+        banner = false;
+    }
+    if (banner){
+        //Submit form
+        window.location.href = "home.html";
     }
 });
 
@@ -125,14 +159,18 @@ inputPassword.addEventListener("click", () => {
     errorPassword.classList.add("no-visible");
     inputPassword.style.boxShadow = "none";
 });
+inputPassword.addEventListener("click", () => {
+    errorPassword.classList.remove("si-visible");
+    errorPassword.classList.add("no-visible");
+    inputPassword.style.boxShadow = "none";
+});
+
 inputEmailUsername.addEventListener("click", () => {
     errorUsernameEmail.classList.remove("si-visible");
     errorUsernameEmail.classList.add("no-visible");
     inputEmailUsername.style.boxShadow = "none";
 });
-inputPasswordLogin.addEventListener("click", () => {
-    errorPasswordLogin.classList.remove("si-visible");
-    errorPasswordLogin.classList.add("no-visible");
-    inputPasswordLogin.style.boxShadow = "none";
+inputTerms.addEventListener("click", () => {
+    inputTerms.style.boxShadow = "none";
 });
 
