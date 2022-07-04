@@ -43,10 +43,8 @@ btnProject1.addEventListener("click", () => {
         project2.classList.add("no-visible");
         project2.classList.remove("si-visible-project");
 
-        btnProject1.classList.remove("project-box");
-        btnProject1.classList.add("project-box-selected");
-        btnProject2.classList.remove("project-box-selected");
-        btnProject2.classList.add("project-box");
+        btnProject1.classList.add("selected");
+        btnProject2.classList.remove("selected");
     }
 });
 btnProject2.addEventListener("click", () => {
@@ -57,9 +55,7 @@ btnProject2.addEventListener("click", () => {
         project1.classList.add("no-visible");
         project1.classList.remove("si-visible-project");
 
-        btnProject2.classList.remove("project-box");
-        btnProject2.classList.add("project-box-selected");
-        btnProject1.classList.remove("project-box-selected");
-        btnProject1.classList.add("project-box");
+        btnProject2.classList.add("selected");
+        btnProject1.classList.remove("selected");
     }
 });

@@ -21,7 +21,7 @@
                 <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
                     <span class="navar-toggler-icon"></span>
                 </button>
-                <div  class="collapse navbar-collapse" id="navbar-nav">
+                <div class="collapse navbar-collapse" id="navbar-nav">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
                             <a href="#" class="nav-link"> 
@@ -35,7 +35,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="navbar-nav justify-content-end"></div>
+                <div class="navbar-nav justify-content-end">
                     <button type="button" class="btn btn-primary-round-md" id="btn-log-in"> Log in</button>
                     <button type="button" class="btn btn-default-round-md" id="btn-sign-up"> Sign up</button>  
                 </div>
@@ -62,7 +62,6 @@
                                             <input type="text" class="form-control" id="inputFullName" placeholder="Full name">
                                             <img src="resources/icons/errorIcon.png" class="input-icon no-visible" id="errorName" alt="ERROR">
                                         </div>
-                                        
                                     </div>
                                     <div class="col-sm-6">
                                         <label for="inputUsername">Username</label>
@@ -74,50 +73,51 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-12">
-                                    <label for="inputEmail">Email</label>
-                                    <div class="input-container">
-                                        <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-                                        <img src="resources/icons/errorIcon.png" class="input-icon no-visible" id="errorEmail" alt="ERROR">
+                                        <label for="inputEmail">Email</label>
+                                        <div class="input-container">
+                                            <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                                            <img src="resources/icons/errorIcon.png" class="input-icon no-visible" id="errorEmail" alt="ERROR">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputPasword">Password</label>
-                                    <div class="input-container">
-                                        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-                                        <img src="resources/icons/errorIcon.png" class="input-icon no-visible" id="errorPassword" alt="ERROR">
+                                    <div class="col-md-12">
+                                        <label for="inputPasword">Password</label>
+                                        <div class="input-container">
+                                            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                                            <img src="resources/icons/errorIcon.png" class="input-icon no-visible" id="errorPassword" alt="ERROR">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="form-group">
-                                        <input type="checkbox" name="terms" id="inputTerms" class="custom-control-input">
-                                        <label for="inputTerms"> I have read and accept the terms and conditions </label>
+                                    <div class="row">
+                                        <div class="col-md-1">
+
+                                            <input type="checkbox" name="terms" id="inputTerms" class="custom-control-input">
+                                        </div>
+                                        <div class="col-md-11">
+                                            <label for="inputTerms"> I have read and accept the terms and conditions </label>
+                                        </div>
                                     </div>
-                                </div>
                                     <div class="d-flex justify-content-center">
                                         <button type="submit" class="btn btn-lg">Create account</button>
                                     </div>
                                 </div>
                             </form>
+
                             <!--FORM LOGIN-->
                             <form class="no-visible" id="form-log-in">
                                 <div class="form-group">
                                     <div class="col-md-12">
-                                    <label for="inputEmailUsername">Email or username</label>
-                                    <div class="input-container">
-                                        <input type="text" class="form-control" id="inputEmailUsername" placeholder="Email or username">
-                                        <img src="resources/icons/errorIcon.png" class="input-icon no-visible" id="errorUsernameEmail" alt="ERROR"> 
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputPasswordLogin">Password</label>
-                                    <div class="input-container">
-                                        <input type="password" class="form-control" id="inputPasswordLogin" placeholder="Password">
-                                        <img src="resources/icons/errorIcon.png" class="input-icon no-visible" id="errorPasswordLogin" alt="ERROR">
-                                    </div>
-                                </div>
-                                </div>
-                                    <div class="d-flex justify-content-center">
-                                        <button type="submit" class="btn btn-lg">Log in</button>
+                                        <label for="inputEmailUsername">Email or username</label>
+                                        <div class="input-container">
+                                            <input type="text" class="form-control" id="inputEmailUsername" placeholder="Email or username">
+                                            <img src="resources/icons/errorIcon.png" class="input-icon no-visible" id="errorUsernameEmail" alt="ERROR"> 
+                                        </div>
+                                        <label for="inputPasswordLogin">Password</label>
+                                        <div class="input-container">
+                                            <input type="password" class="form-control" id="inputPasswordLogin" placeholder="Password">
+                                            <img src="resources/icons/errorIcon.png" class="input-icon no-visible" id="errorPasswordLogin" alt="ERROR">
+                                        </div>
+                                        <div class="d-flex justify-content-center">
+                                            <button type="submit" class="btn btn-lg">Log in</button>
+                                        </div>
                                     </div>
                                 </div>
                             </form>
