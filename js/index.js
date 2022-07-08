@@ -1,48 +1,75 @@
 //Forms
-let formSignUp = document.getElementById("form-sign-up");
-let formLogIn = document.getElementById("form-log-in");
+const formSignUp = document.getElementById("form-sign-up");
+const formLogIn = document.getElementById("form-log-in");
 
 //Buttons
-let btnSignUp = document.getElementById("btn-sign-up");
-let btnLogIn = document.getElementById("btn-log-in");
+const btnSignUp = document.getElementById("btn-sign-up");
+const btnLogIn = document.getElementById("btn-log-in");
 
 //Sign Up
-let inputFullName = document.getElementById("inputFullName");
-let inputUsername= document.getElementById("inputUsername");
-let inputEmail = document.getElementById("inputEmail");
-let inputPassword = document.getElementById("inputPassword");
-let inputTerms = document.getElementById("inputTerms");
+const inputFullName = document.getElementById("inputFullName");
+const inputUsername= document.getElementById("inputUsername");
+const inputEmail = document.getElementById("inputEmail");
+const inputPassword = document.getElementById("inputPassword");
+const inputTerms = document.getElementById("inputTerms");
 
 //Log In
-let inputEmailUsername = document.getElementById("inputEmailUsername");
-let inputPasswordLogin = document.getElementById("inputPasswordLogin");
+const inputEmailUsername = document.getElementById("inputEmailUsername");
+const inputPasswordLogin = document.getElementById("inputPasswordLogin");
 
 //Error
-let errorName = document.getElementById("errorName");
-let errorUsername = document.getElementById("errorUsername");
-let errorEmail = document.getElementById("errorEmail");
-let errorPassword = document.getElementById("errorPassword");
-let errorUsernameEmail = document.getElementById("errorUsernameEmail");
-let errorPasswordLogin = document.getElementById("errorPasswordLogin");
+const errorName = document.getElementById("errorName");
+const errorUsername = document.getElementById("errorUsername");
+const errorEmail = document.getElementById("errorEmail");
+const errorPassword = document.getElementById("errorPassword");
+const errorUsernameEmail = document.getElementById("errorUsernameEmail");
+const errorPasswordLogin = document.getElementById("errorPasswordLogin");
+
+//Toasts
+const toastUsername = document.getElementById("toastUsername");
+const toastEmail = document.getElementById("toastEmail");
+const toastLogin = document.getElementById("toastLogin");
+
+//Toast show function
+function showToast(t) {
+    const toast = new bootstrap.Toast(t);
+    toast.show();
+}
+
+//Read parameters
+if (getParameterByName("p") == "login") {
+    enableLogIn();
+}
+else if (getParameterByName("p") == "errorU") {
+    showToast(toastUsername);
+    inputUsername.style.boxShadow = "inset 0 0 0 2px #4111CA";
+    errorUsername.classList.add("si-visible");
+    errorUsername.classList.remove("no-visible");
+}
+else if (getParameterByName("p") == "errorE") {
+    showToast(toastEmail);
+    inputEmail.style.boxShadow = "inset 0 0 0 2px #4111CA";
+    errorEmail.classList.add("si-visible");
+    errorEmail.classList.remove("no-visible");
+}
+else if (getParameterByName("p")== "errorL") {
+    showToast(toastLogin);
+    enableLogIn();
+}
+
 
 
 //Action buttons from header
 btnLogIn.addEventListener("click", () => {
-    if (formLogIn.className == "no-visible") {
-        formLogIn.classList.add("si-visible");
-        formLogIn.classList.remove("no-visible");
-        formSignUp.classList.add("no-visible");
-        formSignUp.classList.remove("si-visible");
-
-        btnLogIn.classList.add("btn-default-round-md");
-        btnLogIn.classList.remove("btn-primary-round-md");
-
-        btnSignUp.classList.remove("btn-default-round-md");
-        btnSignUp.classList.add("btn-primary-round-md");
-    }
+    enableLogIn();
 });
 
 btnSignUp.addEventListener("click", () => {
+    enableSignUp();
+});
+
+//SignUp function
+function enableSignUp() {
     if (formSignUp.className == "no-visible") {
         formSignUp.classList.add("si-visible");
         formSignUp.classList.remove("no-visible");
@@ -55,7 +82,23 @@ btnSignUp.addEventListener("click", () => {
         btnLogIn.classList.remove("btn-default-round-md");
         btnLogIn.classList.add("btn-primary-round-md");
     }
-});
+}
+
+//Log in function
+function enableLogIn() {
+   if (formLogIn.className == "no-visible") {
+        formLogIn.classList.add("si-visible");
+        formLogIn.classList.remove("no-visible");
+        formSignUp.classList.add("no-visible");
+        formSignUp.classList.remove("si-visible");
+
+        btnLogIn.classList.add("btn-default-round-md");
+        btnLogIn.classList.remove("btn-primary-round-md");
+
+        btnSignUp.classList.remove("btn-default-round-md");
+        btnSignUp.classList.add("btn-primary-round-md");
+    }
+}
 
 //Form icons from Sign Up
 formSignUp.addEventListener("submit", (e) => {
@@ -97,7 +140,7 @@ formSignUp.addEventListener("submit", (e) => {
     }
     if (banner){
         //Submit form
-        alert("Cuenta registrada");
+        formSignUp.submit();
 
         //Go to Log in
         formLogIn.classList.add("si-visible");
@@ -134,11 +177,13 @@ formLogIn.addEventListener("submit", (e) => {
     }
     if (banner){
         //Submit form
-        window.location.href = "home.html";
+        formLogIn.submit();
     }
 });
 
 
+
+//Input click errors
 inputFullName.addEventListener("click", () => {
     errorName.classList.remove("si-visible");
     errorName.classList.add("no-visible");
@@ -149,6 +194,7 @@ inputUsername.addEventListener("click", () => {
     errorUsername.classList.add("no-visible");
     inputUsername.style.boxShadow = "none";
 });
+
 inputEmail.addEventListener("click", () => {
     errorEmail.classList.remove("si-visible");
     errorEmail.classList.add("no-visible");
@@ -174,3 +220,14 @@ inputTerms.addEventListener("click", () => {
     inputTerms.style.boxShadow = "none";
 });
 
+function getParameterByName(variable) {
+   var query = window.location.search.substring(1);
+   var vars = query.split("&");
+   for (var i=0; i < vars.length; i++) {
+       var pair = vars[i].split("=");
+       if(pair[0] == variable) {
+           return pair[1];
+       }
+   }
+   return false;
+}

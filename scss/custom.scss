@@ -231,18 +231,18 @@ body .main hr{
   @include makeTitle();
   font-size: 25px;
 }
-.project-box span.project-owner, .project-box-selected span.project-owner{
-  font-size: 12px;
+
+.projects-bar .project-box:hover{
+  transform: scale(103%);
+  cursor: pointer;
+}
+.project-box.selected{
+  @include boxPurpleBorder();
+  transform: scale(103%);
 }
 
-.project-box-selected{
-  @include boxPurpleBorder();
-  padding: 1rem;
-  margin: 1rem;
-  background-color: $hachiGray;
-  border-radius: 20px;
-  @include makeTitle();
-  font-size: 25px;
+.project-box span.project-owner, .project-box-selected span.project-owner{
+  font-size: 12px;
 }
 
 .si-visible{
