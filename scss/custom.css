@@ -140,7 +140,11 @@ input[type="checkbox"]:checked {
   content: url("../resources/icons/palomita.png");
 }
 
-form .btn-lg, form .btn-group-lg > .btn {
+textarea {
+  width: 100%;
+}
+
+form .btn-lg, form .btn-group-lg > .btn, body .modal .modal-content form .btn-lg, body .modal .modal-content form .btn-group-lg > .btn {
   border-radius: 20px;
   margin: 2px;
   background-color: #4111CA;
@@ -186,6 +190,7 @@ body .main hr {
   margin: 1rem;
   background-color: #171717;
   border-radius: 20px;
+  border: none;
   font-family: 'MADE_Tommy_Soft';
   font-size: 50px;
   font-weight: bold;
@@ -193,33 +198,46 @@ body .main hr {
   font-size: 25px;
 }
 
-.project-box-selected {
+.projects-bar .project-box:hover {
+  -webkit-transform: scale(103%);
+          transform: scale(103%);
+  cursor: pointer;
+}
+
+.project-box.selected {
   padding: 10px;
   border-style: solid;
-  border-color: #4111CA;
-  padding: 1rem;
-  margin: 1rem;
-  background-color: #171717;
-  border-radius: 20px;
-  font-family: 'MADE_Tommy_Soft';
-  font-size: 50px;
-  font-weight: bold;
-  color: #f5f5f5;
-  font-size: 25px;
+  border: none;
+  -webkit-box-shadow: inset 0 0 0 3px #4111CA;
+          box-shadow: inset 0 0 0 3px #4111CA;
+  -webkit-transform: scale(103%);
+          transform: scale(103%);
+}
+
+.project-box span.project-owner, .project-box-selected span.project-owner {
+  font-size: 12px;
 }
 
 .si-visible {
-  display: block;
+  display: block !important;
+}
+
+.si-visible-project {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
 }
 
 .no-visible {
-  display: none;
+  display: none !important;
 }
 
 .taskbox {
   padding: 10px;
   border-style: solid;
-  border-color: #4111CA;
+  border: none;
+  -webkit-box-shadow: inset 0 0 0 3px #4111CA;
+          box-shadow: inset 0 0 0 3px #4111CA;
   border-radius: 20px;
   font-size: 10px;
   margin-top: 10px;
@@ -227,6 +245,18 @@ body .main hr {
 
 .task-type {
   margin-top: 1rem;
+}
+
+body .modal .modal-content .modal-header .modal-title {
+  font-family: 'MADE_Tommy_Soft';
+  font-weight: bold;
+  color: #111111;
+}
+
+body .modal-content {
+  background-color: #f5f5f5;
+  font-family: 'MADE_Tommy_Soft';
+  border-radius: 20px;
 }
 
 /*!
