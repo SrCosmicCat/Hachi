@@ -72,10 +72,10 @@
                             <hr>
                             
                             <!-- HIVE SECTION-->
-                            <div class="row no-visible">
+                            <div class="row si-visible">
                                 <div class="col-md mt-2">
                                     <!-- Create new task box (only visible in admins side)-->
-                                    <div class="project-box">
+                                    <button type="button" class="create-add-button" id="create-task" data-bs-toggle="modal" data-bs-target="#createTaskModal">  
                                         <div class="d-flex">
                                         <div>
                                         <svg class="icon-new"></svg>
@@ -84,7 +84,75 @@
                                             <h5 class="normalText mt-2"> Create new task</h5>
                                         </div>
                                         </div>
+                                    </button>
+
+                                <!-- Modal create task -->
+                                <div class="modal fade" id="createTaskModal" tabindex="-1" aria-labelledby="createTaskModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title mx-5" id="createTaskModalLabel">Create new task</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <form class="form-create-task">
+                                                <div class="modal-body">
+                                                    <hr>
+                                                    <div class="form-group">
+                                                        <h2>Fill the following camps</h2>
+                                                        <label for="inputEmail">Task Name</label>
+                                                        <div class="input-container">
+                                                            <input type="text" class="form-control" id="inputProjectName">
+                                                            <img src="resources/icons/errorIcon.png" class="input-icon no-visible" id="errorProjectName" alt="ERROR">
+                                                        </div>
+                                                        <label for="inputEmail">Short Description</label>
+                                                        <div class="input-container">
+                                                            <input type="text" class="form-control" id="inputProjectName">
+                                                            <img src="resources/icons/errorIcon.png" class="input-icon no-visible" id="errorProjectName" alt="ERROR">
+                                                        </div>
+                                                        <label for="inputEmail">Date</label>
+                                                        <div class="input-container">
+                                                            <input type="date" class="form-control" id="inputProjectName">
+                                                            <img src="resources/icons/errorIcon.png" class="input-icon no-visible" id="errorProjectName" alt="ERROR">
+                                                        </div>
+                                                        <label for="inputEmail">Assign To: </label>
+                                                        <div class="input-container">
+                                                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                  Choose one
+                                                                </button>
+                                                                <div class="dropdown-menu">
+                                                                  <button class="dropdown-item" type="button">Member 1</button>
+                                                                  <button class="dropdown-item" type="button">Member 2</button>
+                                                                  <button class="dropdown-item" type="button">Member 3</button>
+                                                                </div>
+                                                        </div>
+                                                        <label for="inputEmail">Assign To: </label>
+                                                        <div class="form-check">
+                                                            <input type="checkbox" class="form-check-input" id="member1">
+                                                            <label for="member1"><p>Member 1</p></label>
+                                                            <img src="resources/icons/errorIcon.png" class="input-icon no-visible" id="errorProjectName" alt="ERROR">
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input type="checkbox" class="form-check-input" id="member2">
+                                                            <label for="member2"><p>Member 2</p></label>
+                                                            <img src="resources/icons/errorIcon.png" class="input-icon no-visible" id="errorProjectName" alt="ERROR">
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input type="checkbox" class="form-check-input" id="member3">
+                                                            <label for="member3"><p>Member 3</p></label>
+                                                            <img src="resources/icons/errorIcon.png" class="input-icon no-visible" id="errorProjectName" alt="ERROR">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer d-flex justify-content-center">
+                                                    <button type="button" class="btn btn-lg" data-bs-dismiss="modal">Close</button>
+                                                    <button type="submit" class="btn btn-lg">Assign</button>
+                                                </div>
+                                            </form>
+                                        </div>
                                     </div>
+                                </div>
+
+
 
                                     <!-- Published Tasks -->
                                     <div class="project-box">
@@ -123,7 +191,7 @@
                             <div class="row no-visible">
                                 <div class="col-md mt-2">
                                     <!-- post new psot-->
-                                    <div class="project-box">
+                                    <button type="button" class="create-add-button" id="create-post" data-bs-toggle="modal" data-bs-target="#createPostModal">  
                                         <div class="d-flex">
                                         <div>
                                         <svg class="icon-new"></svg>
@@ -132,27 +200,57 @@
                                             <h5 class="normalText mt-2"> Post a new comment </h5>
                                         </div>
                                         </div>
+                                    </button>
+
+                                <!-- Modal post comment -->
+                                <div class="modal fade" id="createPostModal" tabindex="-1" aria-labelledby="createPostModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title mx-5" id="createPostModalLabel">Create new post</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <form class="form-add-member">
+                                                <div class="modal-body">
+                                                    <hr>
+                                                    <div class="form-group">
+                                                        <h2>Ask a question, comment suggestions, let others know what you think!</h2>
+                                                        <label for="inputEmail"></label>
+                                                        <div class="input-container">
+                                                            <input type="text" class="form-control" id="inputProjectName" placeholder="Leave a comment">
+                                                            <img src="resources/icons/errorIcon.png" class="input-icon no-visible" id="errorProjectName" alt="ERROR">
+                                                        </div>
+                                                    </div>
+                                                    <p>Write short sentences and be concise so people make time to read you </p>
+                                                </div>
+                                                <div class="modal-footer d-flex justify-content-center">
+                                                    <button type="button" class="btn btn-lg" data-bs-dismiss="modal">Close</button>
+                                                    <button type="submit" class="btn btn-lg">Add</button>
+                                                </div>
+                                            </form>
+                                        </div>
                                     </div>
+                                </div>
 
                                     <!-- Published Comments -->
                                     <div class="project-box">
                                         <div class="d-flex">
-                                        <div>
-                                        <svg class="icon-post"></svg>
-                                        </div>
-                                        <div class="col-md mx-3">
-                                            <h5 class="normalText mt-2"> Miguel posted a comment: How do I kill the Chostito?</h5>
-                                        </div>
+                                            <div>
+                                            <svg class="icon-post"></svg>
+                                            </div>
+                                            <div class="col-md mx-3">
+                                                <h5 class="normalText mt-2"> Miguel posted a comment: How do I kill the Chostito?</h5>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- MEMBERS SECTION-->
-                            <div class="row si-visible">
+                            <div class="row no-visible">
                                 <div class="col-md mt-2">
                                     <!-- Add new member (only visible in admins side)-->
-                                    <div class="project-box">
+                                    <button type="button" class="create-add-button" id="add-member" data-bs-toggle="modal" data-bs-target="#addMemberModal">                                    
                                         <div class="d-flex">
                                         <div>
                                         <svg class="icon-new"></svg>
@@ -161,7 +259,39 @@
                                             <h5 class="normalText mt-2">Add new member</h5>
                                         </div>
                                         </div>
+                                    </button>
+                               <!-- Modal add member -->
+                            <div class="modal fade" id="addMemberModal" tabindex="-1" aria-labelledby="addMemberModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title mx-5" id="addMemberModalLabel">Add a new member</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <form class="form-add-member">
+                                            <div class="modal-body">
+                                                <hr>
+                                                <div class="form-group">
+                                                    <h2>Enter the email or username of your new member</h2>
+                                                    <label for="inputEmail">Email or username</label>
+                                                    <div class="input-container">
+                                                        <input type="text" class="form-control" id="inputProjectName">
+                                                        <img src="resources/icons/errorIcon.png" class="input-icon no-visible" id="errorProjectName" alt="ERROR">
+                                                    </div>
+                                                </div>
+                                                <p>*They will receive an email that will
+                                                    redirect them to the project</p>
+                                            </div>
+                                            <div class="modal-footer d-flex justify-content-center">
+                                                <button type="button" class="btn btn-lg" data-bs-dismiss="modal">Close</button>
+                                                <button type="submit" class="btn btn-lg">Add</button>
+                                            </div>
+                                        </form>
                                     </div>
+                                </div>
+                            </div>
+
+                                </div>
 
                                     <!-- Actual members -->
                                     <div class="project-box">

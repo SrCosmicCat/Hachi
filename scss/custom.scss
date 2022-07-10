@@ -1,4 +1,5 @@
 $hachiPurple: #4111CA;
+$hachiLightPurple:  #D2C6F4;
 $hachiGray: #1E1E1E;
 $hachiDarkerGray: #111111;
 $hachiYellow: #e7b614;
@@ -57,7 +58,6 @@ $theme-colors:(
   font-family: 'MADE_Tommy_Soft';
   color: #1d1d1d;
   border-radius: 20px;
-  padding: 50px 70px 70px 70px;  
   margin: 10px;
 }
 
@@ -252,6 +252,7 @@ footer{
 
 form {
  @include whiteForm();
+ padding: 50px 70px 70px 70px;  
 }
 
 form .form-control{
@@ -387,6 +388,18 @@ body .main hr{
   font-size: 25px;
 }
 
+.create-add-button{
+  padding: 1rem;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  background-color: $hachiGray;
+  border-radius: 20px;
+  border: solid;
+  border-color: $hachiPurple;
+  @include makeTitle();
+  font-size: 25px;
+}
+
 .section-tag{
   border-radius: 20px;
   border: none;
@@ -445,17 +458,40 @@ body .main hr{
   border-width: 1px;
 }
 
-
+.form-create-project, .form-add-member, .form-create-task {
+  @include whiteForm();
+  padding: 0 20px 20px 20px;
+}
 
 body .modal .modal-content .modal-header .modal-title{
   font-family: 'MADE_Tommy_Soft';
+  font-size: 30px;
   font-weight: bold;
-  color: #111111;
 }
+
+body .modal .modal-content .modal-header, body .modal .modal-content .modal-footer{
+ border-style: none;
+}
+
+body .modal .modal-content .modal-body{
+  padding-top: 0;
+}
+
 body .modal-content{
+  padding:0;
   background-color: #f5f5f5;
   font-family: 'MADE_Tommy_Soft';
   border-radius: 20px;
+  @include text();
+}
+
+
+body .modal-content hr{
+  border-bottom-style: solid;
+  border-color: $hachiPurple;
+  border-width: 3px;
+  opacity: 1;
+  margin-top: 0;
 }
 
 

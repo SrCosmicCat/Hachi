@@ -56,20 +56,27 @@
                                         <div class="modal-dialog modal-dialog-centered">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title" id="createProjectModalLabel">Create new project</h5>
+                                                    <h5 class="modal-title mx-5" id="createProjectModalLabel">Create new project</h5>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
-                                                <form id="form-create-project">
+                                                <form class="form-create-project">
                                                     <div class="modal-body">
+                                                        <hr>
                                                         <div class="form-group">
+                                                            <h2>Fill the following camps</h2>
                                                             <label for="inputEmail">Project Name</label>
                                                             <div class="input-container">
-                                                                <input type="text" class="form-control" id="inputProjectName" placeholder="Project Name">
+                                                                <input type="text" class="form-control" id="inputProjectName">
                                                                 <img src="resources/icons/errorIcon.png" class="input-icon no-visible" id="errorProjectName" alt="ERROR">
+                                                            </div>
+                                                            <label for="inputEmail">Project Description</label>
+                                                            <div class="input-container">
+                                                                <input type="text" class="form-control" id="inputProjectDescription">
+                                                                <img src="resources/icons/errorIcon.png" class="input-icon no-visible" id="errorProjectDescription" alt="ERROR">
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="modal-footer d-flex">
+                                                    <div class="modal-footer d-flex justify-content-center">
                                                         <button type="button" class="btn btn-lg" data-bs-dismiss="modal">Close</button>
                                                         <button type="submit" class="btn btn-lg">Create new</button>
                                                     </div>
