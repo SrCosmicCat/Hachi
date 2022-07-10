@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projects</title>
+        <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">-->
+        <link rel="icon" href="resources/img/Hachi_logo_yellowremastered.png">
+        <link rel="stylesheet" href="scss/custom.css">
+    </head>
+    <body>
+        <!-- Here we go :rosel2: -->     
+        <!-- Navbar toogle-->
+        <nav class="navbar navbar-expand-sm">
+            <div class="container">
+                <a href="#" class="navbar-brand">
+                    <img id="logo" src="resources/img/Hachi_logo_yellowremastered.png" alt="Hachi's logo brand">
+                    <span class="hachiLogoMenu">Hachi</span>
+                </a>
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+                    <span class="navar-toggler-icon"></span>
+                </button>
+                <div  class="collapse navbar-collapse" id="navbar-nav"> 
+                </div>
+            </div>
+        </nav>  
+        <div class="main">
+            <div class="container">
+                <hr>
+                <div class="hive">
+                    <div class="row">
+                        <div class="col-md mt-12">
+
+                            <!-- Banner de proyecto -->
+                            <div class="project-box p-5">
+                                <div class="row">
+                                    <div class="col-md mt-6">
+                                    <h1 class="mediumTitle">Project Name</h1>
+                                    </div>
+                                    <div class="col-md mt-6  d-flex justify-content-end">
+                                    <h1 class="normalText">Código: 1A2B3C</h1>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md mt-12">
+                                        <h1 class="normalText">Owner: Chostito</h1>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- columnas de proyecto-->
+                            <div projects-bar>
+                            <div class="row">
+                                <div class="col-md">
+                                 <div class="section-tag d-flex justify-content-center">
+                                    <h1 class="normalText p-2">Hive</h1>
+                                 </div>
+                                </div>
+                                <div class="col-md">
+                                 <div class="section-tag d-flex justify-content-center">
+                                    <h1 class="normalText p-2">Posts</h1>
+                                 </div>
+                                </div>
+                                <div class="col-md">
+                                 <div class="section-tag d-flex justify-content-center">
+                                    <h1 class="normalText p-2">Members</h1>
+                                 </div>
+                                </div>
+                            </div>
+                            </div>
+                            <hr>
+                            
+                            <!-- HIVE SECTION-->
+                            <div class="row no-visible">
+                                <div class="col-md mt-2">
+                                    <!-- Create new task box (only visible in admins side)-->
+                                    <div class="project-box">
+                                        <div class="d-flex">
+                                        <div>
+                                        <svg class="icon-new"></svg>
+                                        </div>
+                                        <div class="col-md mx-3">
+                                            <h5 class="normalText mt-2"> Create new task</h5>
+                                        </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Published Tasks -->
+                                    <div class="project-box">
+                                        <div class="d-flex">
+                                        <div>
+                                        <svg class="icon-task"></svg>
+                                        </div>
+                                        <div class="col-md mx-3">
+                                            <h5 class="normalText mt-2"> Task 1: Kill the Chostito</h5>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="project-box">
+                                        <div class="d-flex">
+                                        <div>
+                                        <svg class="icon-task"></svg>
+                                        </div>
+                                        <div class="col-md mx-3">
+                                            <h5 class="normalText mt-2"> Task 2: Steal the Chostito's corpse</h5>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="project-box">
+                                        <div class="d-flex">
+                                        <div>
+                                        <svg class="icon-post"></svg>
+                                        </div>
+                                        <div class="col-md mx-3">
+                                            <h5 class="normalText mt-2"> Miguel posted a comment: How do I kill the Chostito?</h5>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- POSTS SECTION-->
+                            <div class="row no-visible">
+                                <div class="col-md mt-2">
+                                    <!-- post new psot-->
+                                    <div class="project-box">
+                                        <div class="d-flex">
+                                        <div>
+                                        <svg class="icon-new"></svg>
+                                        </div>
+                                        <div class="col-md mx-3">
+                                            <h5 class="normalText mt-2"> Post a new comment </h5>
+                                        </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Published Comments -->
+                                    <div class="project-box">
+                                        <div class="d-flex">
+                                        <div>
+                                        <svg class="icon-post"></svg>
+                                        </div>
+                                        <div class="col-md mx-3">
+                                            <h5 class="normalText mt-2"> Miguel posted a comment: How do I kill the Chostito?</h5>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- MEMBERS SECTION-->
+                            <div class="row si-visible">
+                                <div class="col-md mt-2">
+                                    <!-- Add new member (only visible in admins side)-->
+                                    <div class="project-box">
+                                        <div class="d-flex">
+                                        <div>
+                                        <svg class="icon-new"></svg>
+                                        </div>
+                                        <div class="col-md mx-3">
+                                            <h5 class="normalText mt-2">Add new member</h5>
+                                        </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Actual members -->
+                                    <div class="project-box">
+                                        <div class="d-flex">
+                                        <div>
+                                        <svg class="icon-member"></svg>
+                                        </div>
+                                        <div class="col-md mx-3">
+                                            <h5 class="normalText mt-2">Miguel Ángel Diosdado Rodriguez</h5>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="project-box">
+                                        <div class="d-flex">
+                                        <div>
+                                        <svg class="icon-member"></svg>
+                                        </div>
+                                        <div class="col-md mx-3">
+                                            <h5 class="normalText mt-2">Daniel González Guerrero</h5>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="project-box">
+                                        <div class="d-flex">
+                                        <div>
+                                        <svg class="icon-member"></svg>
+                                        </div>
+                                        <div class="col-md mx-3">
+                                            <h5 class="normalText mt-2">Christian Alegría Ruíz</h5>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="project-box">
+                                        <div class="d-flex">
+                                        <div>
+                                        <svg class="icon-member"></svg>
+                                        </div>
+                                        <div class="col-md mx-3">
+                                            <h5 class="normalText mt-2">Oscar Gabriel Reséndiz Ramírez</h5>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>   
+
+                        </div>
+                <!-- Footer -->
+                <footer class="footer">       
+                    <hr>
+                    <div class="row justify-content-center">
+                        <div class="col-md-4">
+                            <img id="hachiLogoFooter" src="resources/img/Hachi_logo_letters_horizontal.png" alt="Hachi's logo brand">
+                        </div>
+                        <div class="col-md-6">
+                            <h1 class="hachiTextFooter">Hachi Ver 2.0 Copyright &copy; 2022. All rights reserved. </h1>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        
+      
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>

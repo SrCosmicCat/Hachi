@@ -1,5 +1,5 @@
 $hachiPurple: #4111CA;
-$hachiGray: #171717;
+$hachiGray: #1E1E1E;
 $hachiDarkerGray: #111111;
 $hachiYellow: #e7b614;
 
@@ -8,6 +8,7 @@ $theme-colors:(
   "hachiPurple": #4111CA,
   "hachiYellow": #e7b614
 );
+
 
 
 @mixin general-bg {
@@ -27,6 +28,20 @@ $theme-colors:(
   font-weight: bold;
   color: #f5f5f5;
 }
+
+@mixin makeTitle2{
+  font-family: 'MADE_Tommy_Soft';
+  font-size: 50px;
+  font-weight:normal;
+  color: #f5f5f5;
+}
+
+@mixin text{
+  font-family: 'MADE_Tommy_Soft';
+  font-size: 20px;
+  font-weight: lighter;
+}
+
 
 @mixin purpleButton{
   border-radius: 20px;
@@ -65,6 +80,13 @@ $theme-colors:(
  box-shadow: inset 0 0 0 3px #4111CA;
 }
 
+@mixin icon{
+  background-size:cover;
+  height: 30px;
+  width: 30px;
+  background-repeat: no-repeat;
+}
+
 
 html{
   @include general-bg();
@@ -80,7 +102,7 @@ footer{
 
 .navbar{
   margin-top: 10px;
-  background-color: $hachiGray;
+  background-color: #171717;
   color: #f5f5f5;
 }
 
@@ -95,6 +117,31 @@ footer{
   width: auto;
   margin: 20px;
 }
+
+/*
+            I c o n s
+*/
+
+.icon-new{
+  background-image: url(../resources/icons/new.png);
+  @include icon();
+}
+
+.icon-task{
+  background-image: url(../resources/icons/icon-task.png);
+  @include icon();
+}
+
+.icon-post{
+  background-image: url(../resources/icons/icon-post.png);
+  @include icon();
+}
+
+.icon-member{
+  background-image: url(../resources/icons/icon-member.png);
+  @include icon();
+}
+
 
 .hachiLogoMenu{
   font-family: 'MADE_Tommy_Soft';
@@ -111,7 +158,7 @@ footer{
 
 .hachiTextFooter{
   font-family: 'MADE_Tommy_Soft';
-  font-size: 25px;
+  font-size: 23px;
   margin-top: 53px;
   color: rgb(255, 255, 255);
 }
@@ -123,6 +170,12 @@ footer{
   font-weight: lighter;
   color: #f5f5f5;
   line-height: 50px;
+}
+
+.normalText{
+  @include text();
+  color: #f5f5f5;
+  margin: 5px;
 }
 
 .main h3 {
@@ -160,6 +213,9 @@ footer{
   @include makeTitle();
 }
 
+.mediumTitle{
+  @include makeTitle2();
+}
 
 form {
  @include whiteForm();
@@ -232,6 +288,14 @@ body .main hr{
   font-size: 25px;
 }
 
+.section-tag{
+  border-radius: 20px;
+  border: none;
+}
+
+/* 
+    Poner diferente cursor en cajas de proyecto && barra inferior de project.html
+*/
 .projects-bar .project-box:hover{
   transform: scale(103%);
   cursor: pointer;
@@ -240,6 +304,16 @@ body .main hr{
   @include boxPurpleBorder();
   transform: scale(103%);
 }
+
+.section-tag:hover{
+  transform: scale(103%);
+  cursor: pointer;
+}
+.section-tag.selected{
+  @include boxPurpleBorder();
+  transform: scale(103%);
+}
+
 
 .project-box span.project-owner, .project-box-selected span.project-owner{
   font-size: 12px;
