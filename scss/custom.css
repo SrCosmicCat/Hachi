@@ -70,6 +70,46 @@ footer {
   background-repeat: no-repeat;
 }
 
+.icon-comment {
+  background-image: url(../resources/icons/icon-comment.png);
+  background-size: cover;
+  height: 30px;
+  width: 30px;
+  background-repeat: no-repeat;
+}
+
+.icon-send {
+  background-image: url(../resources/icons/send.png);
+  background-size: cover;
+  height: 30px;
+  width: 30px;
+  background-repeat: no-repeat;
+}
+
+.icon-menu {
+  background-image: url(../resources/icons/icon-menu.png);
+  background-size: cover;
+  height: 30px;
+  width: 30px;
+  background-repeat: no-repeat;
+}
+
+.icon-hive {
+  background-image: url(../resources/icons/hive-menu.png);
+  background-size: cover;
+  height: 30px;
+  width: 30px;
+  background-repeat: no-repeat;
+}
+
+.icon-home {
+  background-image: url(../resources/icons/icon-home.png);
+  background-size: cover;
+  height: 30px;
+  width: 30px;
+  background-repeat: no-repeat;
+}
+
 .hachiLogoMenu {
   font-family: 'MADE_Tommy_Soft';
   font-weight: bold;
@@ -168,10 +208,78 @@ form {
 
 form .form-control {
   border-radius: 10px;
-  background-color: #D2C6F4;
   margin-bottom: 25px;
   margin-top: 5px;
   font-weight: bold;
+  background-color: #D2C6F4;
+}
+
+.secondForm form {
+  background-color: #171717;
+  padding: 0%;
+}
+
+.secondForm form .trans {
+  border-style: none;
+  background: none;
+}
+
+.darkTextArea {
+  padding: 1rem;
+  margin: 1rem;
+  background-color: #1E1E1E;
+  border-style: solid;
+  border-color: #4111CA;
+  width: 100%;
+  border-radius: 50px;
+  height: 40px;
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  max-height: 40px;
+  color: #f5f5f5;
+  padding: 10px;
+}
+
+/* 
+          SIDE BAR 
+*/
+#side_nav {
+  border-right-style: solid;
+  border-right-color: #4111CA;
+  border-width: 1px;
+}
+
+.sidebar li a {
+  color: #f5f5f5;
+  margin: 10px;
+}
+
+.sidebar ul li .tooltip {
+  position: absolute;
+  left: 145px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: #f5f5f5;
+  line-height: 30px;
+  border-radius: 30px;
+  text-align: center;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: 0s;
+  transition: 0s;
+  height: 28px;
+  width: 80px;
+  color: #1E1E1E;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  font-family: 'MADE_Tommy_Soft';
+}
+
+.sidebar ul li:hover .tooltip {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  opacity: 1;
 }
 
 input[type="checkbox"] {
@@ -319,6 +427,17 @@ body .main hr {
 
 .task-type {
   margin-top: 1rem;
+}
+
+.desc-box {
+  padding: 1rem;
+  margin: 1rem;
+  background-color: #1E1E1E;
+  border-style: solid;
+  border-color: #4111CA;
+  width: 100%;
+  border-radius: 10px;
+  border-width: 1px;
 }
 
 body .modal .modal-content .modal-header .modal-title {

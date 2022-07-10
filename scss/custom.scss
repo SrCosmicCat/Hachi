@@ -63,7 +63,6 @@ $theme-colors:(
 
 @mixin inputForm {
   border-radius: 10px;
-  background-color: #D2C6F4;
   margin-bottom: 25px;
   margin-top: 5px;
   font-weight: bold;
@@ -85,6 +84,15 @@ $theme-colors:(
   height: 30px;
   width: 30px;
   background-repeat: no-repeat;
+}
+
+@mixin box {
+  padding: 1rem;
+  margin: 1rem;
+  background-color: $hachiGray;
+  border-style: solid;
+  border-color: $hachiPurple;
+  width: 100%;
 }
 
 
@@ -140,6 +148,31 @@ footer{
 .icon-member{
   background-image: url(../resources/icons/icon-member.png);
   @include icon();
+}
+
+.icon-comment{
+  background-image: url(../resources/icons/icon-comment.png);
+  @include icon();
+}
+
+.icon-send{
+  background-image: url(../resources/icons/send.png);
+  @include icon();
+}
+
+.icon-menu{
+  background-image: url(../resources/icons/icon-menu.png);
+  @include icon();
+}
+
+.icon-hive{
+  background-image: url(../resources/icons/hive-menu.png);
+  @include icon();
+}
+
+.icon-home{
+   background-image: url(../resources/icons/icon-home.png);
+   @include icon();
 }
 
 
@@ -223,6 +256,72 @@ form {
 
 form .form-control{
  @include inputForm();
+ background-color: #D2C6F4;
+}
+
+.secondForm form{
+ background-color: #171717;
+ padding: 0%
+
+}
+
+.secondForm form .trans{
+  border-style: none;
+  background: none;
+
+}
+
+.darkTextArea{
+  @include box();
+  border-radius: 50px;
+  height: 40px;
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  max-height: 40px;
+  color: #f5f5f5;
+  padding: 10px;
+}
+
+
+/* 
+          SIDE BAR 
+*/
+#side_nav{
+  border-right-style: solid;
+  border-right-color: #4111CA;
+  border-width: 1px;
+
+}
+
+
+.sidebar li a{
+  color: #f5f5f5;
+  margin: 10px;
+}
+
+.sidebar ul li .tooltip{
+  position: absolute;
+  left: 145px;
+  transform: translateY(-50%);
+  background: #f5f5f5;
+  line-height: 30px;
+  border-radius: 30px;
+  text-align: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: 0s;
+  height: 28px;
+  width: 80px;
+  color: #1E1E1E;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  font-family: 'MADE_Tommy_Soft';
+}
+
+.sidebar ul li:hover .tooltip{
+  transition: all 0.5s ease;
+  opacity: 1;
+
 }
 
 input[type="checkbox"]{
@@ -339,6 +438,14 @@ body .main hr{
 .task-type{
   margin-top: 1rem;
 }
+
+.desc-box{
+  @include box();
+  border-radius: 10px;
+  border-width: 1px;
+}
+
+
 
 body .modal .modal-content .modal-header .modal-title{
   font-family: 'MADE_Tommy_Soft';
