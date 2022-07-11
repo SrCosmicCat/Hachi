@@ -175,6 +175,10 @@ footer{
    @include icon();
 }
 
+.icon-add{
+  background-image: url(../resources/icons/icon-add.png);
+  @include icon();
+}
 
 .hachiLogoMenu{
   font-family: 'MADE_Tommy_Soft';
@@ -187,6 +191,8 @@ footer{
 .hachiTextMenu{
   font-family: 'MADE_Tommy_Soft';
   color: rgb(255, 255, 255);
+  list-style: none;
+
 }
 
 .hachiTextFooter{
@@ -458,15 +464,17 @@ body .main hr{
   border-width: 1px;
 }
 
-.form-create-project, .form-add-member, .form-create-task {
+.form-create-project, .form-add-member, .form-create-task, .form-join-project {
   @include whiteForm();
   padding: 0 20px 20px 20px;
+
 }
 
 body .modal .modal-content .modal-header .modal-title{
   font-family: 'MADE_Tommy_Soft';
   font-size: 30px;
   font-weight: bold;
+  color: $hachiGray;
 }
 
 body .modal .modal-content .modal-header, body .modal .modal-content .modal-footer{

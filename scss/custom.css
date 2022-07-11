@@ -110,6 +110,14 @@ footer {
   background-repeat: no-repeat;
 }
 
+.icon-add {
+  background-image: url(../resources/icons/icon-add.png);
+  background-size: cover;
+  height: 30px;
+  width: 30px;
+  background-repeat: no-repeat;
+}
+
 .hachiLogoMenu {
   font-family: 'MADE_Tommy_Soft';
   font-weight: bold;
@@ -120,6 +128,7 @@ footer {
 .hachiTextMenu {
   font-family: 'MADE_Tommy_Soft';
   color: white;
+  list-style: none;
 }
 
 .hachiTextFooter {
@@ -455,7 +464,7 @@ body .main hr {
   border-width: 1px;
 }
 
-.form-create-project, .form-add-member, .form-create-task {
+.form-create-project, .form-add-member, .form-create-task, .form-join-project {
   background-color: #f5f5f5;
   font-family: 'MADE_Tommy_Soft';
   color: #1d1d1d;
@@ -468,6 +477,7 @@ body .modal .modal-content .modal-header .modal-title {
   font-family: 'MADE_Tommy_Soft';
   font-size: 30px;
   font-weight: bold;
+  color: #1E1E1E;
 }
 
 body .modal .modal-content .modal-header, body .modal .modal-content .modal-footer {
