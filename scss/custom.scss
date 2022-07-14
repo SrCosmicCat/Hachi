@@ -46,11 +46,12 @@ $theme-colors:(
 
 @mixin purpleButton{
   border-radius: 20px;
+  border-style: none ;
   margin: 2px;
   background-color: #4111CA;
   font-family: 'MADE_Tommy_Soft';
   font-size: 20px;
-  color: #f5f5f5
+  color: #f5f5f5;
 }
 
 @mixin whiteForm{
@@ -179,6 +180,13 @@ footer{
   background-image: url(../resources/icons/icon-add.png);
   @include icon();
 }
+
+.icon-edit{
+  background-image: url(../resources/icons/icon-edit.png);
+  @include icon();
+  cursor: pointer;
+}
+
 
 .hachiLogoMenu{
   font-family: 'MADE_Tommy_Soft';
@@ -331,6 +339,8 @@ form .form-control{
 
 }
 
+
+
 input[type="checkbox"]{
   appearance: none;
   -webkit-appearance: none;
@@ -467,8 +477,26 @@ body .main hr{
 .form-create-project, .form-add-member, .form-create-task, .form-join-project {
   @include whiteForm();
   padding: 0 20px 20px 20px;
+}
+
+.editableField{
+  @include box();
+  @include text();
+  width: 50%;
+  border-radius: 10px;
+  color:#f5f5f5;
+}
+
+
+.editableField:disabled{
+  @include box();
+  @include text();
+  width: 50%;
+  border-radius: 10px;
+  color: $hachiYellow; 
 
 }
+
 
 body .modal .modal-content .modal-header .modal-title{
   font-family: 'MADE_Tommy_Soft';
