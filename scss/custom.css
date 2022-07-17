@@ -127,6 +127,33 @@ footer {
   cursor: pointer;
 }
 
+.icon-hexagon {
+  background-image: url(../resources/icons/icon-hexagon.png);
+  background-size: cover;
+  height: 30px;
+  width: 30px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.icon-bee {
+  background-image: url(../resources/icons/icon-bee.png);
+  background-size: cover;
+  height: 30px;
+  width: 30px;
+  background-repeat: no-repeat;
+  margin-left: 21px;
+}
+
+.icon-logout {
+  background-image: url(../resources/icons/icon-logout.png);
+  background-size: cover;
+  height: 30px;
+  width: 30px;
+  background-repeat: no-repeat;
+  margin-left: 40px;
+}
+
 .hachiLogoMenu {
   font-family: 'MADE_Tommy_Soft';
   font-weight: bold;
@@ -138,6 +165,7 @@ footer {
   font-family: 'MADE_Tommy_Soft';
   color: white;
   list-style: none;
+  text-decoration: none;
 }
 
 .hachiTextFooter {
@@ -195,6 +223,29 @@ footer {
 
 .navbar .btn-primary-round-md:hover {
   color: #4111CA;
+}
+
+.dropdown-menu.show {
+  background-color: #111111;
+  border-style: none;
+  border-radius: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.dropdown-menu.show .dropdown-item {
+  color: #f5f5f5;
+  border-radius: 20px;
+}
+
+.dropdown-menu.show .dropdown-divider {
+  background-color: #4111CA;
+}
+
+.dropdown-menu.show .dropdown-item:hover {
+  color: #e7b614;
+  border-radius: 20px;
+  background-color: #171717;
 }
 
 .main {
@@ -296,6 +347,33 @@ form .form-control {
 }
 
 .sidebar ul li:hover .tooltip {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  opacity: 1;
+}
+
+.task-butt a .tip {
+  position: absolute;
+  left: 86%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: #f5f5f5;
+  line-height: 30px;
+  border-radius: 30px;
+  text-align: center;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: 0s;
+  transition: 0s;
+  height: 28px;
+  width: 150px;
+  color: #1E1E1E;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  font-family: 'MADE_Tommy_Soft';
+}
+
+.task-butt a:hover .tip {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   opacity: 1;
