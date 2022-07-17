@@ -72,17 +72,17 @@
                             <hr>
                             
                             <!-- HIVE SECTION-->
-                            <div class="row si-visible">
+                            <div class="row no-visible">
                                 <div class="col-md mt-2">
                                     <!-- Create new task box (only visible in admins side)-->
                                     <button type="button" class="create-add-button" id="create-task" data-bs-toggle="modal" data-bs-target="#createTaskModal">  
                                         <div class="d-flex">
-                                        <div>
-                                        <svg class="icon-new"></svg>
-                                        </div>
-                                        <div class="col-md mx-3">
-                                            <h5 class="normalText mt-2"> Create new task</h5>
-                                        </div>
+                                            <div>
+                                            <svg class="icon-new"></svg>
+                                            </div>
+                                            <div class="col-md mx-3">
+                                                <h5 class="normalText mt-2"> Create new task</h5>
+                                            </div>
                                         </div>
                                     </button>
 
@@ -187,6 +187,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <!-- POSTS SECTION-->
                             <div class="row no-visible">
                                 <div class="col-md mt-2">
@@ -247,7 +248,7 @@
                             </div>
 
                             <!-- MEMBERS SECTION-->
-                            <div class="row no-visible">
+                            <div class="row si-visible">
                                 <div class="col-md mt-2">
                                     <!-- Add new member (only visible in admins side)-->
                                     <button type="button" class="create-add-button" id="add-member" data-bs-toggle="modal" data-bs-target="#addMemberModal">                                    
@@ -353,9 +354,11 @@
             </div>
         </div>
         
-      
+        
         
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>        
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="js/index.js"></script>
     </body>
 </html>
