@@ -187,6 +187,26 @@ footer{
   cursor: pointer;
 }
 
+.icon-hexagon{
+  background-image: url(../resources/icons/icon-hexagon.png);
+  @include icon();
+  cursor: pointer;
+}
+
+.icon-bee{
+  background-image: url(../resources/icons/icon-bee.png);
+  @include icon();
+  margin-left: 21px;
+}
+
+.icon-logout{
+  background-image: url(../resources/icons/icon-logout.png);
+  @include icon();
+  margin-left: 40px;
+}
+
+
+
 
 .hachiLogoMenu{
   font-family: 'MADE_Tommy_Soft';
@@ -200,7 +220,7 @@ footer{
   font-family: 'MADE_Tommy_Soft';
   color: rgb(255, 255, 255);
   list-style: none;
-
+  text-decoration: none;
 }
 
 .hachiTextFooter{
@@ -250,6 +270,29 @@ footer{
 .navbar .btn-primary-round-md:hover{
   color: #4111CA;
 }
+
+.dropdown-menu.show{
+  background-color: $hachiDarkerGray;
+  border-style: none;
+  border-radius: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.dropdown-menu.show .dropdown-item{
+  color:#f5f5f5;
+  border-radius: 20px;
+}
+
+.dropdown-menu.show .dropdown-divider{
+  background-color:$hachiPurple;
+}
+
+.dropdown-menu.show .dropdown-item:hover{
+  color:$hachiYellow;
+  border-radius: 20px;
+  background-color: #171717;
+}
+
 
 .main{
  @include general-bg();
@@ -337,6 +380,30 @@ form .form-control{
   transition: all 0.5s ease;
   opacity: 1;
 
+}
+
+.task-butt a .tip{
+  position: absolute;
+  left: 86%;
+  transform: translateY(-50%);
+  background: #f5f5f5;
+  line-height: 30px;
+  border-radius: 30px;
+  text-align: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: 0s;
+  height: 28px;
+  width: 150px;
+  color: #1E1E1E;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  font-family: 'MADE_Tommy_Soft';
+}
+
+
+.task-butt a:hover .tip{
+    transition: all 0.5s ease;
+    opacity: 1;
 }
 
 
